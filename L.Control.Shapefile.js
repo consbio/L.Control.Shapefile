@@ -9,7 +9,10 @@ L.Control.Shapefile = L.Control.extend({
         var form = L.DomUtil.create('div', 'leaflet-control-command-form', controlUI);
 
         // Insert the form HTML into the form.
-        form.innerHTML = "<form id='uploadForm' action='' method='post' enctype='multipart/form-data'><input id='file' type='file' onchange='fileToArrayBuffer(event)' name='uploadFile' style='display:none'></form>";
+        form.innerHTML =
+            "<form id='uploadForm' action='' method='post' enctype='multipart/form-data'>" +
+                "<input id='file' type='file' onchange='fileToArrayBuffer(event)' name='uploadFile' style='display:none'>" +
+            "</form>";
 
         L.DomEvent
             .addListener(form, 'click', function () {
@@ -45,7 +48,6 @@ function fileToArrayBuffer(event) {
 
     reader.readAsArrayBuffer(file);
 
-
 }
 
 // Convert the array buffer to geojson and add it to the map as a layer
@@ -54,11 +56,9 @@ function loadArrayBuffer(buffer) {
     shp(buffer).then(function (geojson) {
         var layer = L.geoJSON(geojson);
         var layers = layer._layers;
-        console.log(layers)
         Object.keys(layers).forEach(function(key) {
             var layer = (layers[key]);
             layer.addTo(map);
-
         });
     });
 }
