@@ -14,4 +14,3 @@ L.control.zoom({
 
 // Shapefile control
 L.control.shapefile({ position: 'topleft' }).addTo(map);
-

@@ -62,4 +62,3 @@ function loadArrayBuffer(buffer) {
         });
     });
 }
-
