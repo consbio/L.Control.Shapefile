@@ -42,7 +42,7 @@ function fileToArrayBuffer(event) {
         console.log(e.target.result);
         console.log(e.target.result.byteLength);
 
-        // Pass the Array buffer to the shapfile-js funct
+        // Pass the Array buffer to the shapfile-js function
         loadArrayBuffer(e.target.result);
     };
 
