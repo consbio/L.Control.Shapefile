@@ -1,16 +1,4 @@
-settings.py
-*.bat
-*.pyc
-*.idea
-*.json
 *.gitignore
 *.swp
-*.js.swp
-/static/tables/*
-/static/data/*
-deps/*
 GIS/*
-shp/*
-/static/Leaflet/myPNG/*
 Archive/
-/static/docs/*
