@@ -9,14 +9,12 @@ Include L.Control.Shapefile.js and L.Control.CSS into your webpage after the bod
 Create the leaflet map<p>
 ```
 var map = L.map('map').setView([43.5,-116.9], 13);
-
 ```
 
 Add the control<p>
 
 ```
 L.control.shapefile({ position: 'topleft' }).addTo(map);
-
 ```
 # Credits
 Uses <a href="https://github.com/calvinmetcalf/shapefile-js">shapefile-js</a> to convert the shapefile to GeoJSON.<p>
