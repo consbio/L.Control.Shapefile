@@ -4,8 +4,8 @@ Push the upload button, browse to a zipped shapefile, and it will display in you
 Tested with Leaflet 1.0. 
 
 # Usage
-Include Leaflet and shapefile-js into the head of your webpage.<p>
-Include L.Control.Shapefile.js and L.Control.CSS into your webpage after the body tag.<p>
+Include Leaflet and shapefile-js in the head of your webpage.<p>
+Include L.Control.Shapefile.js and L.Control.CSS in your webpage after the body tag.<p>
 Create the leaflet map<p>
 ```
 var map = L.map('map').setView([43.5,-116.9], 13);
