@@ -16,7 +16,7 @@ Add the control<p>
 ```
 L.control.shapefile({ position: 'topleft' }).addTo(map);
 ```
-See map.html as an example.
+See map.html as an example. There is a sample shapefile in the shp directory that can be used for testing.
 
 # Credits
 Uses <a href="https://github.com/calvinmetcalf/shapefile-js">shapefile-js</a> to convert the shapefile to GeoJSON.<p>
