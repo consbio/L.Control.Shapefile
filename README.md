@@ -13,11 +13,11 @@ var map = L.map('map').setView([43.5,-116.9], 13);
 
 Add the control<p>
 
-See map.html as an example.
-
 ```
 L.control.shapefile({ position: 'topleft' }).addTo(map);
 ```
+See map.html as an example.
+
 # Credits
 Uses <a href="https://github.com/calvinmetcalf/shapefile-js">shapefile-js</a> to convert the shapefile to GeoJSON.<p>
 # Contributors<p>
