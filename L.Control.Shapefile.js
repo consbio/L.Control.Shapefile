@@ -54,20 +54,30 @@ L.Control.Shapefile = L.Control.extend({
 
     // Convert the array buffer to geojson and add it to the map as a layer
     loadArrayBuffer: function(buffer) {
-
+        var thisControl = this;
+        if (!('cumulative' in this.options)) {
+            this.clearLayers();
+        }
         shp(buffer).then(function (geojson) {
             var layer = L.geoJSON(geojson);
             var layers = layer._layers;
+            thisControl.layers = [];
             Object.keys(layers).forEach(function(key) {
                 var layer = (layers[key]);
                 layer.addTo(map);
+                thisControl.layers.push(layer);
             });
         });
+    },
+    clearLayers: function() {
+        if (this.layers) {
+            this.layers.forEach(l => {
+                map.removeLayer(l);
+            });
+        }
     }
 });
 
 L.control.shapefile = function(opts) {
     return new L.Control.Shapefile(opts);
 };
-
-
